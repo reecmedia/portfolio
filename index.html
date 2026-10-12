@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ransom Ehiba | Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .project-card.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-teal-500 selection:text-slate-950">
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-all">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-extrabold text-xl tracking-tight text-white flex items-center gap-1.5">
+        <span class="text-teal-400">&lt;</span>RE<span class="text-teal-400">/&gt;</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-teal-400 transition-colors">About</a>
+        <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-teal-400 transition-colors">Skills</a>
+        <a href="#leadership" class="hover:text-teal-400 transition-colors">Impact</a>
+        <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contact" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-teal-400 border border-teal-500/40 rounded-lg hover:bg-teal-400 hover:text-slate-950 transition-all">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle Navigation">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950 px-6 py-4 space-y-3 text-sm">
+      <a href="#about" class="block text-slate-300 hover:text-teal-400 mobile-link">About</a>
+      <a href="#projects" class="block text-slate-300 hover:text-teal-400 mobile-link">Projects</a>
+      <a href="#skills" class="block text-slate-300 hover:text-teal-400 mobile-link">Skills</a>
+      <a href="#leadership" class="block text-slate-300 hover:text-teal-400 mobile-link">Impact</a>
+      <a href="#contact" class="block text-teal-400 font-semibold mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 space-y-32 pt-28">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="pt-12 sm:pt-20 space-y-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+        Multidisciplinary Creator & Technologist
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+        Transforming concepts into <br class="hidden sm:block" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400">
+          visual media, research, & impact.
+        </span>
+      </h1>
+
+      <p class="max-w-2xl text-slate-400 text-base sm:text-lg leading-relaxed">
+        Passionate about bridging scientific inquiry, visual design, and humanitarian leadership. Crafting clear digital experiences and practical solutions that inform, inspire, and drive real-world results.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="#projects" class="px-6 py-3.5 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30">
+          Explore Projects
+        </a>
+        <a href="#contact" class="px-6 py-3.5 border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 text-slate-200 font-semibold rounded-xl transition-all">
+          Contact Me
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 border-t border-slate-900">
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <p class="text-2xl font-extrabold text-white">500+</p>
+          <p class="text-xs text-slate-400 mt-1">Individuals Trained & Reached</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <p class="text-2xl font-extrabold text-white">50+</p>
+          <p class="text-xs text-slate-400 mt-1">Creative Media Campaigns</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <p class="text-2xl font-extrabold text-white">100%</p>
+          <p class="text-xs text-slate-400 mt-1">Dedication to Execution</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <p class="text-2xl font-extrabold text-white">1</p>
+          <p class="text-xs text-slate-400 mt-1">Multidisciplinary Vision</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ME ================= -->
+    <section id="about" class="space-y-8 scroll-mt-24">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest">About Me</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Where Science Meets Creative Strategy</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p>
+            Hello! I'm <strong class="text-white">Ransom Ehiba</strong>. My background unites scientific precision, visual communication, and organizational leadership.
+          </p>
+          <p>
+            With training in Biomedical Technology, I value structured research, analytical rigor, and medical diagnostic fundamentals. In parallel, through my creative brand <strong class="text-white">REECMEDIA (Wreck Media)</strong>, I direct visual identity design, digital posters, and multimedia storytelling that capture attention and communicate complex ideas simply.
+          </p>
+          <p>
+            My experience leading humanitarian and emergency response initiatives—including directing detachment operations and certifying volunteers—has deepened my commitment to team mentorship, proactive logistics, and high-stakes problem-solving.
+          </p>
+        </div>
+
+        <div class="md:col-span-5 grid grid-cols-1 gap-3">
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800/80 space-y-2">
+            <div class="w-9 h-9 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
+              <i data-lucide="palette" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">Visual & Brand Design</h4>
+            <p class="text-xs text-slate-400 leading-normal">Crafting digital flyers, presentation slides, and promotional assets with clear visual hierarchy.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800/80 space-y-2">
+            <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <i data-lucide="microscope" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">Biomedical & Laboratory Science</h4>
+            <p class="text-xs text-slate-400 leading-normal">Hematology, tissue histology, clinical diagnostic procedures, and analytical research documentation.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800/80 space-y-2">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-white text-base">Emergency Response & Leadership</h4>
+            <p class="text-xs text-slate-400 leading-normal">Emergency first aid instruction, community camp operations, and detachment command.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS ================= -->
+    <section id="projects" class="space-y-8 scroll-mt-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest">Portfolio</h2>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Featured Works & Case Studies</h3>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap gap-2 text-xs font-medium">
+          <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-teal-400 text-slate-950 font-bold transition">All</button>
+          <button data-filter="creative" class="filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition">Creative Media</button>
+          <button data-filter="biomedical" class="filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition">Biomedical & Research</button>
+          <button data-filter="leadership" class="filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition">Leadership</button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1: Creative Media -->
+        <article class="project-card creative p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 font-semibold">Creative Media</span>
+              <span class="text-slate-500 font-mono">REECMEDIA</span>
+            </div>
+            <h4 class="text-lg font-bold text-white leading-snug">Visual Content, Posters & Digital Identity</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Conceptualized and delivered digital promotional campaign flyers, event branding, and video edits engineered for high social reach and community engagement.
+            </p>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">PixelLab</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Canva</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">CapCut</span>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-400 hover:text-teal-300">
+              Request Samples <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Biomedical Research -->
+        <article class="project-card biomedical p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">Biomedical Research</span>
+              <span class="text-slate-500 font-mono">Academic</span>
+            </div>
+            <h4 class="text-lg font-bold text-white leading-snug">Hematological Parameters & Plant Extract Evaluation</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Laboratory investigation evaluating the physiological and hematological effects of <em>Gongronema latifolium</em> and <em>Ocimum gratissimum</em> extracts in vivo, analyzing blood profile shifts.
+            </p>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Hematology</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Histology</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Data Analysis</span>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              View Synopsis <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Technical & Presentation -->
+        <article class="project-card biomedical p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">Clinical Defense</span>
+              <span class="text-slate-500 font-mono">Diagnostics</span>
+            </div>
+            <h4 class="text-lg font-bold text-white leading-snug">Differential Leukocyte Count in Diagnostics</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Comprehensive technical presentation synthesizing automated and manual differential leukocyte counting methods, cell morphology variations, and pathological indicators.
+            </p>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Clinical Pathology</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Deck Design</span>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              View Outline <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Leadership -->
+        <article class="project-card leadership p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-semibold">Leadership & Operations</span>
+              <span class="text-slate-500 font-mono">Red Cross</span>
+            </div>
+            <h4 class="text-lg font-bold text-white leading-snug">Annual First Aid & Emergency Response Training</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Directed a multi-day training camp for over 200 volunteers and trainees. Coordinated practical emergency drills, syllabus adherence, instructor logistics, and certification.
+            </p>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Operations</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Training</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Triage</span>
+            </div>
+            <a href="#leadership" class="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
+              Read Impact Story <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Code & Automation -->
+        <article class="project-card biomedical p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 font-semibold">Technical & Code</span>
+              <span class="text-slate-500 font-mono">Software</span>
+            </div>
+            <h4 class="text-lg font-bold text-white leading-snug">Scientific Computing & Scripting Explorations</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Developing automation scripts and data analysis workflows utilizing Python to process numerical data, format research observations, and build interactive tooling.
+            </p>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Python</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Data Processing</span>
+            </div>
+            <a href="https://github.com" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-400 hover:text-teal-300">
+              GitHub Repo <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6: Creative Presentations -->
+        <article class="project-card creative p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 font-semibold">Presentation Design</span>
+              <span class="text-slate-500 font-mono">Visuals</span>
+            </div>
+            <h4 class="text-lg font-bold text-white leading-snug">High-Stakes Technical Slide Presentations</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Crafting clear, infographic-rich slide decks for academic defenses, departmental conferences, and institutional orientations using PowerPoint and typography principles.
+            </p>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">PowerPoint</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300">Visual Flow</span>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-400 hover:text-teal-300">
+              Inquire Design <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= SKILLS & TOOLKIT ================= -->
+    <section id="skills" class="space-y-8 scroll-mt-24">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest">Capabilities</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Skills & Technical Toolkit</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Creative Suite -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+          <h4 class="text-white font-bold text-base flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-teal-400"></i> Creative & Design
+          </h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>PixelLab (Mobile Graphics Architecture)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>Canva Pro & Brand Identity Systems</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>CapCut & Short-Form Video Editing</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>Microsoft PowerPoint (Academic / Corporate)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>Social Media Visual Copywriting</li>
+          </ul>
+        </div>
+
+        <!-- Technical & Lab -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+          <h4 class="text-white font-bold text-base flex items-center gap-2">
+            <i data-lucide="flask-conical" class="w-4 h-4 text-emerald-400"></i> Biomedical & Tech
+          </h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Hematological & Histological Analysis</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Clinical Laboratory Procedures</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Python & Logic Scripting</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>HTML5 / CSS / Tailwind CSS</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Data Summarization & Statistical Logging</li>
+          </ul>
+        </div>
+
+        <!-- Leadership & Operations -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+          <h4 class="text-white font-bold text-base flex items-center gap-2">
+            <i data-lucide="users" class="w-4 h-4 text-cyan-400"></i> Leadership & Impact
+          </h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Basic Emergency Care & First Aid Instruction</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Camp Organization & Logistics Control</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Public Speaking & Orientation Facilitation</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Stakeholder & Institutional Relations</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Youth Mentorship & Unit Chartering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LEADERSHIP & COMMUNITY ================= -->
+    <section id="leadership" class="space-y-8 scroll-mt-24">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest">Leadership Record</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Community Action & Service</h3>
+      </div>
+
+      <div class="space-y-4">
+        <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-semibold text-teal-400 uppercase tracking-wider">Humanitarian Operations</span>
+            <h4 class="text-lg font-bold text-white mt-0.5">Commandant | Red Cross Detachment</h4>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
+              Led detachment executive councils, coordinated campus-wide health and safety webinars, and administered full practical emergency response certifications.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-slate-500 shrink-0">Executive Tenure</span>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-semibold text-teal-400 uppercase tracking-wider">Youth Empowerment</span>
+            <h4 class="text-lg font-bold text-white mt-0.5">Primary & Secondary Unit Inauguration Lead</h4>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
+              Facilitated the formal charter and launch of student humanitarian units at institutional demonstration schools, establishing recurring junior first aid drills.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-slate-500 shrink-0">Institutional Impact</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="space-y-8 scroll-mt-24 pb-20">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest">Get In Touch</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Let’s Collaborate</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <!-- Direct Info -->
+        <div class="md:col-span-5 space-y-6">
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Interested in creative brand assets, technical and laboratory collaborations, or emergency training facilitation? Send a message and let's discuss how we can work together.
+          </p>
+
+          <div class="space-y-3">
+            <a href="mailto:ransomehiba@example.com" class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-teal-500/40 text-slate-300 hover:text-white transition">
+              <i data-lucide="mail" class="w-5 h-5 text-teal-400"></i>
+              <span class="text-xs sm:text-sm font-medium">ransomehiba@example.com</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-teal-500/40 text-slate-300 hover:text-white transition">
+              <i data-lucide="linkedin" class="w-5 h-5 text-teal-400"></i>
+              <span class="text-xs sm:text-sm font-medium">Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="md:col-span-7">
+          <form class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4" onsubmit="event.preventDefault(); alert('Message sent successfully! (Connect to Formspree or your backend for production email delivery)');">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Name</label>
+                <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-teal-400 transition" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Email Address</label>
+                <input type="email" required placeholder="john@example.com" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-teal-400 transition" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Subject</label>
+              <input type="text" required placeholder="Project Collaboration / Inquiries" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-teal-400 transition" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Message</label>
+              <textarea rows="4" required placeholder="Tell me about your idea or project..." class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-teal-400 transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold rounded-lg text-sm transition-all shadow-lg shadow-teal-500/20">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; <span id="year"></span> Ransom Ehiba. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-teal-400 transition">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= INTERACTIVE JAVASCRIPT ================= -->
+  <script>
+    // Initialize Icons
+    lucide.createIcons();
+
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Navigation Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Project Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle Active Button Styles
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-teal-400', 'text-slate-950', 'font-bold');
+          b.classList.add('bg-slate-900', 'border', 'border-slate-800', 'text-slate-300');
+        });
+        btn.classList.add('bg-teal-400', 'text-slate-950', 'font-bold');
+        btn.classList.remove('bg-slate-900', 'border', 'border-slate-800', 'text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+
+        // Filter cards
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
